@@ -179,7 +179,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -400,6 +400,7 @@
 			baseConfigurationReference = 1CA83D4DFCEC4EA421431D24 /* Pods-Social Media App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Social Media App/Social Media App.entitlements";
 				DEVELOPMENT_TEAM = V3KHYE3S36;
 				INFOPLIST_FILE = "Social Media App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -414,6 +415,7 @@
 			baseConfigurationReference = 98CD1EA63C3173A3C459E776 /* Pods-Social Media App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Social Media App/Social Media App.entitlements";
 				DEVELOPMENT_TEAM = V3KHYE3S36;
 				INFOPLIST_FILE = "Social Media App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
