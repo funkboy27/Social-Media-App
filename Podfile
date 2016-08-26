@@ -9,6 +9,6 @@ target 'Social Media App' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
-
+pod 'FBSDKLoginKit'
 
 end

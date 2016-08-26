@@ -31,6 +31,7 @@
 		3448A13C1D70E2050013CC47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3448A13E1D70E2050013CC47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3448A1441D70E23D0013CC47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34719AF81D71029000D0C171 /* Social Media App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social Media App.entitlements"; sourceTree = "<group>"; };
 		347B57AB1D70F60C000F487F /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		347B57AE1D70F690000F487F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		347B57B01D70F7DE000F487F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		3448A1311D70E2050013CC47 /* Social Media App */ = {
 			isa = PBXGroup;
 			children = (
+				34719AF81D71029000D0C171 /* Social Media App.entitlements */,
 				347B57AD1D70F684000F487F /* utils */,
 				347B57AA1D70E570000F487F /* Model */,
 				347B57A91D70E565000F487F /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V3KHYE3S36;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
