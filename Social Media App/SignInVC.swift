@@ -18,7 +18,16 @@ class SignInVC: UIViewController {
     @IBOutlet weak var passwordField: FancyField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (FIRAuth.auth()?.currentUser) != nil {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +49,7 @@ class SignInVC: UIViewController {
                 print("MATT: Successfully authenticated facebook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.FirebaseAuth(credential)
+                
             }
             
         }
@@ -52,7 +62,7 @@ class SignInVC: UIViewController {
                 print("MATT: Unable to authenticate with Firebase - \(error)")
             } else {
                 print("MATT: Successfully authenticated with Firebase")
-                
+                self.performSegue(withIdentifier: "goToFeed", sender: nil)
             }
         })
     }
@@ -68,6 +78,7 @@ class SignInVC: UIViewController {
                             print("MATT: unable to authenticate with Firebase using email \(error)")
                         } else {
                             print("MATT: Successfully authenticated with email")
+                            self.performSegue(withIdentifier: "goToFeed", sender: nil)
                         }
                     })
                 }

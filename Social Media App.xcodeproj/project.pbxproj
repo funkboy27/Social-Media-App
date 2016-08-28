@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31944A56EE839184AFE248E8 /* Pods_Social_Media_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B42FF78FFD5161CBFF51FA /* Pods_Social_Media_App.framework */; };
+		34356A0C1D724B1300295C24 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34356A0B1D724B1300295C24 /* FeedVC.swift */; };
 		3448A1331D70E2050013CC47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448A1321D70E2050013CC47 /* AppDelegate.swift */; };
 		3448A1351D70E2050013CC47 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448A1341D70E2050013CC47 /* SignInVC.swift */; };
 		3448A1381D70E2050013CC47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3448A1361D70E2050013CC47 /* Main.storyboard */; };
@@ -19,10 +20,13 @@
 		347B57B11D70F7DE000F487F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347B57B01D70F7DE000F487F /* RoundButton.swift */; };
 		347B57B31D70F908000F487F /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347B57B21D70F908000F487F /* FancyField.swift */; };
 		347B57B51D70F9F9000F487F /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347B57B41D70F9F9000F487F /* FancyButton.swift */; };
+		34CDE0861D725A1700277DEE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDE0851D725A1700277DEE /* PostCell.swift */; };
+		34CDE0881D7375BB00277DEE /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDE0871D7375BB00277DEE /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CA83D4DFCEC4EA421431D24 /* Pods-Social Media App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.debug.xcconfig"; sourceTree = "<group>"; };
+		34356A0B1D724B1300295C24 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		3448A12F1D70E2050013CC47 /* Social Media App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Media App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3448A1321D70E2050013CC47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3448A1341D70E2050013CC47 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 		347B57B01D70F7DE000F487F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		347B57B21D70F908000F487F /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		347B57B41D70F9F9000F487F /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		34CDE0851D725A1700277DEE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		34CDE0871D7375BB00277DEE /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		49B42FF78FFD5161CBFF51FA /* Pods_Social_Media_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Media_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CD1EA63C3173A3C459E776 /* Pods-Social Media App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +86,6 @@
 				347B57A91D70E565000F487F /* View */,
 				347B57A81D70E55C000F487F /* Controller */,
 				3448A1321D70E2050013CC47 /* AppDelegate.swift */,
-				3448A1341D70E2050013CC47 /* SignInVC.swift */,
 				3448A1361D70E2050013CC47 /* Main.storyboard */,
 				3448A1391D70E2050013CC47 /* Assets.xcassets */,
 				3448A13B1D70E2050013CC47 /* LaunchScreen.storyboard */,
@@ -93,6 +98,8 @@
 		347B57A81D70E55C000F487F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3448A1341D70E2050013CC47 /* SignInVC.swift */,
+				34356A0B1D724B1300295C24 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -104,6 +111,8 @@
 				347B57B01D70F7DE000F487F /* RoundButton.swift */,
 				347B57B21D70F908000F487F /* FancyField.swift */,
 				347B57B41D70F9F9000F487F /* FancyButton.swift */,
+				34CDE0851D725A1700277DEE /* PostCell.swift */,
+				34CDE0871D7375BB00277DEE /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,6 +284,9 @@
 				3448A1351D70E2050013CC47 /* SignInVC.swift in Sources */,
 				347B57B11D70F7DE000F487F /* RoundButton.swift in Sources */,
 				347B57B51D70F9F9000F487F /* FancyButton.swift in Sources */,
+				34356A0C1D724B1300295C24 /* FeedVC.swift in Sources */,
+				34CDE0861D725A1700277DEE /* PostCell.swift in Sources */,
+				34CDE0881D7375BB00277DEE /* CircleView.swift in Sources */,
 				3448A1331D70E2050013CC47 /* AppDelegate.swift in Sources */,
 				347B57AC1D70F60C000F487F /* FancyView.swift in Sources */,
 				347B57AF1D70F690000F487F /* Constants.swift in Sources */,
