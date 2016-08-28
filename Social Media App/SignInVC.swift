@@ -62,7 +62,11 @@ class SignInVC: UIViewController {
                 print("MATT: Unable to authenticate with Firebase - \(error)")
             } else {
                 print("MATT: Successfully authenticated with Firebase")
-                self.performSegue(withIdentifier: "goToFeed", sender: nil)
+                if let user = user {
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                }
+                
             }
         })
     }
@@ -72,18 +76,32 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("MATT: Email User authenticated with Firebase")
+                    if let user = user {
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("MATT: unable to authenticate with Firebase using email \(error)")
                         } else {
                             print("MATT: Successfully authenticated with email")
-                            self.performSegue(withIdentifier: "goToFeed", sender: nil)
+                            if let user = user {
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
+        print("MATT: Completing sign in")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+
     }
 }
 
